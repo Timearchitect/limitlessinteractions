@@ -61,10 +61,7 @@ define( 'NONCE_SALT',       'cnH`@Mr>bsc)[#n;<D?D2|l;.G(v|:ML~Uk:zoPh^;SxZ:0!,it
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
-
-
-
+$table_prefix = 'lia_';
 
 /* That's all, stop editing! Happy blogging. */
 
@@ -72,5 +69,7 @@ $table_prefix = 'wp_';
 if ( ! defined( 'ABSPATH' ) )
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 
+define( 'FS_METHOD', 'direct' );
+define( 'WP_DEBUG', true );
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

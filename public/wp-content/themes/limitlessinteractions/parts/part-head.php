@@ -13,6 +13,6 @@
 </head>
 <body <?php body_class() ?>>
 <header>
-  <?php name_theme_custom_rules::wp_menu() ?>
+  <?php lia_theme_custom_rules::wp_menu() ?>
 </header>
 <?php get_template_part('templates/content','hero');?>

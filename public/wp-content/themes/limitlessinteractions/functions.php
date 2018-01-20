@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-class name_theme_setup {
+class lia_theme_setup {
   static function hooks() {
     add_action( 'wp_enqueue_scripts', array(__CLASS__, 'scripts') ); 
     add_action( 'after_setup_theme', array(__CLASS__, 'load_theme_textdomain') );
@@ -96,7 +96,7 @@ class name_theme_setup {
 	}
 }
 
-class name_theme_security extends name_theme_setup {
+class lia_theme_security extends lia_theme_setup {
   static function security_check() {
 		parent::hooks();
 		add_action( 'init', array( __CLASS__, 'disable_stuff' ) );
@@ -132,15 +132,15 @@ class name_theme_security extends name_theme_setup {
   }
 }
 
-class name_theme extends name_theme_security {
+class lia_theme extends lia_theme_security {
   static function startup() {
     parent::security_check();
   }
 }
 
-name_theme::startup();
+lia_theme::startup();
 
-class name_theme_custom_rules {
+class lia_theme_custom_rules {
   static function wp_menu($args = []) {
     $args = [
       'theme_location' => 'header', 
